@@ -1,5 +1,4 @@
 // SacAstromech Command Tester v1.1
-// PSI PRO Commands
 // By Chris Bozzoli (DBoz)
 // With code contributions from Neil Hutchison (theJugg1er)
 // v1.1 Added Debug Switch and I2C Receive Switch. Rewrote Read Function and added do_Command function. Simplified Main Loop. 9/26/20
