@@ -4,7 +4,7 @@
 // Place the name of the command set here.  This is used for Debug lines.
 // (e.g. "PSI Pro Commands")
 
-char COMMAND_SET = "Test Command Set";
+#define COMMAND_SET "Test Command Set"
 
 // Enter Command strings here.
 // Place the command between the quote marks.
