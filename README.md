@@ -1,44 +1,24 @@
 # Command-Tester
 Arduino Pro Mini Sketch for the Sacramento Astromech Builders Command Tester
 
-Overview
+Overview:
+
 The purpose of the Command Tester board is to allow a user to send commands to various devices for testing purposes without having to install those devices into an existing system first.  This makes benchtop testing much easier.
 
 The tester can be powered with a 7-36V input to the onboard Pololu D24V50F5 regulator which will give a constant 5V output at 5A to power the connected devices over the Serial or I2C bus.  There is also a +5V output header to power additional devices if needed.  Alternately, this header can be used to feed a regulated 5V input to the board if the user does not wish to install the Pololu regulator.
 
 The Command Tester supports sending commands via I2C as well as Serial at the same time.  Under normal usage, the command tester does not need to receive I2C commands, however there is receive code in the basic sketch, so it is possible to send I2C commands the tester if the user wishes it.  See the Code section below for more information on this.
 
-Board Versions
+Board Versions:
+
 There are currently 3 versions of the Command Tester board.  The differences between the boards are:
 •	V1 board has 15 command buttons, while V1.1 and V1.2 have 14.  The reason for this is because Digital pin 13 is connected to the LED on the Arduino Pro Mini and should not be used as an input, therefore it was removed in the later versions.
 •	The location of the Shift Switch and LED is different on each version of the board.
 Other than the above, the boards are functionally equivalent.
 
-Arduino Pin Connections
-The Arduino Pins are assigned as follows:
-•	TX0		Serial Transmit
-•	RX0		Serial Receive
-•	D2		Command 1
-•	D3		Command 2
-•	D4		Command 3
-•	D5		Command 4
-•	D6		Command 5
-•	D7		Command 6
-•	D8		Command 7
-•	D9		Command 8
-•	D10		Command 9
-•	D11		Command 10
-•	D12		Command 11
-•	D13		On Board LED
-•	A0/D14	Command 12
-•	A1/D15	Command 13
-•	A2/D16	Command 14
-•	A3/D17	Shift
-•	A4/D18	SDA (I2C)
-•	A5/D19	SCL (I2C)		
+Code:
 
-Code
-The current version of the Command Tester code is V1.1 and consists of two files that must be placed in the same directory:
+The current version of the Command Tester code consists of two files that must be placed in the same directory:
 •	Command_Tester_Skeleton_1.1.ino (the main sketch)
 •	config.h (header file that includes configuration settings)
 
@@ -56,7 +36,8 @@ The default behavior of the Command Tester is as the I2C bus master and does not
 
 Warning:  If you do find a need for the tester to receive commands, you may need to do additional coding to accomplish what you need as neither mode will parse JAWALITE commands (both simple and complex modes only handle numerical commands).
 
-Bill of Materials
+Bill of Materials:
+
 •	1x Arduino Pro Mini
 •	1x Pololu D24V50F5 5v, 5A Step-Down Regulator (https://www.pololu.com/product/2851)
 •	Various Male and Female Pin Headers
