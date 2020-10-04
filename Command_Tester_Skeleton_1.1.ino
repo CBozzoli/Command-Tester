@@ -234,15 +234,13 @@ void do_Command() {
       SHIFT_SW = digitalRead(SHIFT_PIN);
 
       if (SHIFT_SW == HIGH) { //For Commands 1-14
-        sendI2C(PSI_FRNT, CMD[i], false);
+        sendI2C(DEST_I2C, CMD[i], false);
         Serial.print(CMD[i]);
-        DEBUG_PRINT_LN(); //Starts new line
         Blink(STATUS_LED, 500, 2);
       }
       else { //For Commands 15-28
-        sendI2C(PSI_FRNT, SHIFT_CMD[i], false);
+        sendI2C(DEST_I2C, SHIFT_CMD[i], false);
         Serial.print(SHIFT_CMD[i]);
-        DEBUG_PRINT_LN(); //Starts new line
         Blink(STATUS_LED, 500, 3);
       }
     }
