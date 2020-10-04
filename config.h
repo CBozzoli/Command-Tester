@@ -54,19 +54,8 @@ char *SHIFT_CMD[] {
 // incoming I2C command
 #define MYI2CADDR 0      //I2C Address for Command Tester
 
-// Destination I2C addresses (change to match your hardware)
-#define STEALTH_CNTL  1     // Main Stealth Controller (Master for the Body I2C bus)
-#define BODY_EXP      9     // Body Stealth Servo Expander
-#define DOME_EXP      12    // Dome Stealth Servo Expander
-#define RADIO_BODY    10    // Body Radio
-#define RADIO_DOME    11    // Dome Radio (Master for the Dome I2C bus)
-#define LOGICS        15    // Rseries Logics
-#define PSI_FRNT      22    // Front PSI
-#define PSI_REAR      23    // Rear PSI
-#define FLTHY_HP      25    // FlthyHP Breakout Board
-#define FLTHY_SERVO   64    // FlthyHP Servo Baord
-#define MAGIC_PNL     20    // Magic Panel
-#define PERI_LIFT     32    // Periscope Lifter
+// Destination I2C address (change to match the device you are testing)
+#define DEST_I2C 22 //PSI Pro
 
 /* The default behaviour of the Command Tester does not need to receive
 *  I2C commands; however, the receive code is included in case a scenario
