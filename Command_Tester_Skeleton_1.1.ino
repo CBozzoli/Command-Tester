@@ -37,7 +37,7 @@ void setup() {
 
   Serial.begin(baudrate); //Begin Serial Bus
 
-  DEBUG_PRINT_LN("SacAstromech Command Tester v1.0 (9-25-20)");
+  DEBUG_PRINT_LN("SacAstromech Command Tester v1.1 (9-26-20)");
   DEBUG_PRINT_LN(COMMAND_SET);
 
   DEBUG_PRINT("My i2C Address: ");
